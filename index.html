@@ -42,7 +42,7 @@
         <!-- Header Section -->
         <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-[var(--border-light)]">
             <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-                <a href="#" class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="h-8 w-8 text-[var(--brand-primary)]">
                         <path fill="currentColor" d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
                     </svg>
@@ -50,11 +50,11 @@
                 </a>
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Cursuri</a>
+                    <a href="courses.html" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Cursuri</a>
                     <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Resurse</a>
                     <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Despre Noi</a>
                 </div>
-                <a href="#" class="btn-primary hidden md:inline-block">Începe Acum</a>
+                <a href="courses.html" class="btn-primary hidden md:inline-block">Începe Acum</a>
                 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden text-[var(--text-primary)] z-50">
@@ -69,10 +69,10 @@
             <!-- Mobile Navigation Menu -->
             <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-[var(--border-light)]">
                 <div class="flex flex-col items-center gap-4 py-4">
-                    <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Cursuri</a>
+                    <a href="courses.html" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Cursuri</a>
                     <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Resurse</a>
                     <a href="#" class="text-base text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors">Despre Noi</a>
-                    <a href="#" class="btn-primary mt-2 w-4/5 text-center">Începe Acum</a>
+                    <a href="courses.html" class="btn-primary mt-2 w-4/5 text-center">Începe Acum</a>
                 </div>
             </div>
         </header>
@@ -80,14 +80,14 @@
         <main class="flex-grow">
             <!-- Hero Section -->
             <section class="relative py-20 md:py-32">
-                <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAU1i8VE6FE3JgvC4o4fIIUcgVqnUvmX2FRZJJ11qyJzU6KBnTyB-QPJnTq6gUJKDjFzRWJQq_DWnt5DjVyUrCq5AGcKBtQN87yU_2Ov0QtygwjAQoqkqoxzYZJ-DCgG4d9vLgPZkp-oi7IugXq7PFjcmAs-nD6R7FcJV9Omg0HGJ_dOAmzJO5Xo3jN-zk_ATK6CUuxX8isDazQMDNC3HBJqfBjLyau9toUtNx4JtK5pK38fi81L3Hu5VCMwqSdu5nSRhcKGe2xT1k"); filter: blur(4px) brightness(0.9); transform: scale(1.05);'></div>
+                <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://images.unsplash.com/photo-1532153975075-48a98b58b478?q=80&w=2070&auto=format&fit=crop"); filter: blur(4px) brightness(0.9); transform: scale(1.05);'></div>
                 <div class="relative container mx-auto px-6 text-center">
                     <div class="relative bg-white/70 backdrop-blur-sm p-8 md:p-12 rounded-2xl max-w-4xl mx-auto">
                         <h1 class="text-4xl md:text-6xl font-bold text-[var(--text-primary)] leading-tight mb-4">Împuternicirea Elevilor pentru Succes Academic</h1>
                         <p class="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-8">
                            EduHub oferă elevilor de liceu prelegeri complete, teste interactive și instrumente de urmărire a progresului pentru a excela în studiile lor.
                         </p>
-                        <a href="#" class="btn-primary text-lg">Începe Acum</a>
+                        <a href="courses.html" class="btn-primary text-lg">Explorează Cursurile</a>
                     </div>
                 </div>
             </section>
@@ -136,7 +136,7 @@
         </main>
 
         <!-- Footer Section -->
-        <footer class="bg-[var(--background-light)] border-t border-[var(--border-light)]">
+        <footer class="bg-white">
             <div class="container mx-auto px-6 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
                     <p class="text-[var(--text-secondary)] text-sm">© 2024 EduHub. Toate drepturile rezervate.</p>
@@ -152,18 +152,13 @@
 
     <!-- JavaScript for Mobile Menu -->
     <script>
-        // Get references to the DOM elements
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuOpenIcon = document.getElementById('menu-open-icon');
         const menuCloseIcon = document.getElementById('menu-close-icon');
 
-        // Add a click event listener to the menu button
         mobileMenuButton.addEventListener('click', () => {
-            // Toggle the 'hidden' class on the mobile menu to show/hide it
             mobileMenu.classList.toggle('hidden');
-            
-            // Toggle the 'hidden' class on the open and close icons
             menuOpenIcon.classList.toggle('hidden');
             menuCloseIcon.classList.toggle('hidden');
         });

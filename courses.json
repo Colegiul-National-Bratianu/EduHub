@@ -1,0 +1,79 @@
+{
+  "biologie": {
+    "clasa_a_IX_a": {
+      "nume": "Clasa a IX-a",
+      "capitole": [
+        {
+          "id": "celula-ix",
+          "titlu": "Celula - Unitatea Vieții",
+          "descriere": "Studiul detaliat al structurii și funcțiilor celulei, de la procariote la eucariote.",
+          "progres": 75,
+          "icon": "celula",
+          "subcapitole": [
+            { "id": "celula-intro", "titlu": "Introducere în teoria celulară" },
+            { "id": "celula-tipuri", "titlu": "Celula procariotă și eucariotă" },
+            { "id": "celula-componente", "titlu": "Componentele celulei eucariote" },
+            { "id": "celula-diviziune", "titlu": "Diviziunea celulară: Mitoza și Meioza" }
+          ]
+        },
+        {
+          "id": "tesuturi-ix",
+          "titlu": "Țesuturi Vegetale și Animale",
+          "descriere": "Clasificarea și caracteristicile principalelor tipuri de țesuturi care formează organismele.",
+          "progres": 40,
+          "icon": "tesuturi",
+          "subcapitole": [
+            { "id": "tesut-vegetal", "titlu": "Țesuturi vegetale" },
+            { "id": "tesut-animal", "titlu": "Țesuturi animale" }
+          ]
+        },
+        {
+          "id": "reproducere-ix",
+          "titlu": "Funcția de Reproducere",
+          "descriere": "Mecanismele reproducerii în lumea vie, de la organisme unicelulare la cele complexe.",
+          "progres": 15,
+          "icon": "reproducere",
+          "subcapitole": [
+            { "id": "reproducere-asexuata", "titlu": "Reproducerea asexuată" },
+            { "id": "reproducere-sexuata", "titlu": "Reproducerea sexuată la plante" },
+            { "id": "reproducere-om", "titlu": "Sistemul reproducător uman" }
+          ]
+        }
+      ]
+    },
+    "clasa_a_X_a": {
+      "nume": "Clasa a X-a",
+      "capitole": [
+        {
+          "id": "anatomie-x",
+          "titlu": "Anatomia și Fiziologia Umană",
+          "descriere": "O explorare a sistemelor de organe ale corpului uman și a funcțiilor acestora.",
+          "progres": 0,
+          "icon": "default",
+          "subcapitole": [
+            { "id": "sistem-nervos", "titlu": "Sistemul nervos" },
+            { "id": "sistem-digestiv", "titlu": "Sistemul digestiv" },
+            { "id": "sistem-respirator", "titlu": "Sistemul respirator" },
+            { "id": "sistem-circulator", "titlu": "Sistemul circulator" }
+          ]
+        },
+        {
+          "id": "genetica-x",
+          "titlu": "Genetică și Ereditate",
+          "descriere": "Principiile eredității, legile lui Mendel și bazele moleculare ale geneticii.",
+          "progres": 5,
+          "icon": "celula",
+          "subcapitole": [
+            { "id": "genetica-intro", "titlu": "Concepte de bază în genetică" },
+            { "id": "genetica-mendeliana", "titlu": "Legile mendeliene ale eredității" },
+            { "id": "genetica-moleculara", "titlu": "Acizii nucleici - suportul informației genetice" }
+          ]
+        }
+      ]
+    },
+    "clasa_a_XI_a": {
+      "nume": "Clasa a XI-a",
+      "capitole": []
+    }
+  }
+}
