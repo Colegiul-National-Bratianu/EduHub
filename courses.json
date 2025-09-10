@@ -9,31 +9,10 @@
           "descriere": "Studiul detaliat al structurii și funcțiilor celulei, de la procariote la eucariote.",
           "icon": "celula",
           "subcapitole": [
-            { "id": "celula-intro", "titlu": "Introducere în teoria celulară" },
-            { "id": "celula-tipuri", "titlu": "Celula procariotă și eucariotă" },
-            { "id": "celula-componente", "titlu": "Componentele celulei eucariote" },
-            { "id": "celula-diviziune", "titlu": "Diviziunea celulară: Mitoza și Meioza" }
-          ]
-        },
-        {
-          "id": "tesuturi-ix",
-          "titlu": "Țesuturi Vegetale și Animale",
-          "descriere": "Clasificarea și caracteristicile principalelor tipuri de țesuturi care formează organismele.",
-          "icon": "tesuturi",
-          "subcapitole": [
-            { "id": "tesut-vegetal", "titlu": "Țesuturi vegetale" },
-            { "id": "tesut-animal", "titlu": "Țesuturi animale" }
-          ]
-        },
-        {
-          "id": "reproducere-ix",
-          "titlu": "Funcția de Reproducere",
-          "descriere": "Mecanismele reproducerii în lumea vie, de la organisme unicelulare la cele complexe.",
-          "icon": "reproducere",
-          "subcapitole": [
-            { "id": "reproducere-asexuata", "titlu": "Reproducerea asexuată" },
-            { "id": "reproducere-sexuata", "titlu": "Reproducerea sexuată la plante" },
-            { "id": "reproducere-om", "titlu": "Sistemul reproducător uman" }
+            { "id": "celula-intro", "titlu": "Introducere în teoria celulară", "content": [] },
+            { "id": "celula-tipuri", "titlu": "Celula procariotă și eucariotă", "content": [] },
+            { "id": "celula-componente", "titlu": "Componentele celulei eucariote", "content": [] },
+            { "id": "celula-diviziune", "titlu": "Diviziunea celulară: Mitoza și Meioza", "content": [] }
           ]
         }
       ]
@@ -42,26 +21,98 @@
       "nume": "Clasa a X-a",
       "capitole": [
         {
-          "id": "anatomie-x",
-          "titlu": "Anatomia și Fiziologia Umană",
-          "descriere": "O explorare a sistemelor de organe ale corpului uman și a funcțiilor acestora.",
-          "icon": "default",
+          "id": "tesuturi-x",
+          "titlu": "Țesuturi Vegetale și Animale",
+          "descriere": "Clasificarea și caracteristicile principalelor tipuri de țesuturi care formează organismele.",
+          "icon": "tesuturi",
           "subcapitole": [
-            { "id": "sistem-nervos", "titlu": "Sistemul nervos" },
-            { "id": "sistem-digestiv", "titlu": "Sistemul digestiv" },
-            { "id": "sistem-respirator", "titlu": "Sistemul respirator" },
-            { "id": "sistem-circulator", "titlu": "Sistemul circulator" }
+            {
+              "id": "tesut-vegetal-x",
+              "titlu": "Țesuturi Vegetale",
+              "content": [
+                { "type": "paragraph", "content": "La organismele pluricelulare, celulele se specializează pentru anumite funcții, formând țesuturi. Acestea sunt grupări de celule interdependente care au aceeași origine, formă, structură și funcție. Știința care studiază țesuturile se numește histologie." },
+                { "type": "paragraph", "content": "După gradul de diferențiere a celulelor distingem două tipuri de țesuturi vegetale: țesuturi embrionare și țesuturi definitive." },
+                { "type": "heading", "level": "h3", "content": "Țesuturi Embrionare (Meristeme)" },
+                { "type": "paragraph", "content": "Sunt formate din celule care se divid activ, generând celule noi ce se vor diferenția în țesuturi definitive. Celulele meristematice sunt mici, rotunjite, cu pereți subțiri și fără spații libere între ele. Ele asigură creșterea în lungime a plantei (prin meristemele apicale, aflate în vârfurile rădăcinilor și tulpinilor) și creșterea în grosime (prin meristemele secundare, cum ar fi cambiul)." },
+                { "type": "heading", "level": "h3", "content": "Țesuturi Definitive" },
+                { "type": "paragraph", "content": "Conțin celule specializate care, de regulă, nu se mai divid. Se clasifică în mai multe categorii, în funcție de rolul principal pe care îl îndeplinesc." },
+                { "type": "list", "items": [
+                    "<b>Țesuturi de apărare:</b> Acoperă și protejează organele plantei. Exemple: epiderma (la organele tinere), suberul (scoarța la organele cu creștere secundară).",
+                    "<b>Țesuturi fundamentale (parenchimatice):</b> Produc sau depozitează substanțe. Exemple: țesutul asimilator din frunze (bogat în cloroplaste pentru fotosinteză), țesutul de depozitare din tuberculi sau semințe (depozitează amidon, uleiuri).",
+                    "<b>Țesuturi conducătoare:</b> Asigură transportul sevei prin corpul plantei. Sunt de două tipuri: vasele lemnoase (xilem), care transportă seva brută (apă cu săruri minerale) de la rădăcină la frunze, și vasele liberiene (floem), care transportă seva elaborată (substanțe organice) de la frunze la restul organelor.",
+                    "<b>Țesuturi mecanice (de susținere):</b> Oferă rezistență și elasticitate plantei. Exemple: colenchimul (celule vii, cu pereți îngroșați neuniform) și sclerenchimul (celule moarte, cu pereți îngroșați uniform).",
+                    "<b>Țesuturi secretoare:</b> Produc și elimină diverse substanțe precum rășina (la conifere), nectarul (în flori), latexul (la păpădie) sau arome."
+                ]},
+                { "type": "flip_card", "front": "Ce este epiderma?", "back": "Este un țesut de apărare, de regulă format dintr-un singur strat de celule, ce acoperă organele tinere ale plantei, precum frunzele și tulpinile ierboase. Conține stomate, care permit schimbul de gaze." }
+              ]
+            },
+            {
+              "id": "tesut-animal-x",
+              "titlu": "Țesuturi Animale",
+              "content": [
+                  { "type": "paragraph", "content": "Corpul animalelor este format din patru tipuri fundamentale de țesuturi, care se diferențiază în timpul dezvoltării embrionare: epiteliale, conjunctive, muscular și nervos." },
+                  { "type": "heading", "level": "h3", "content": "Țesuturi Epiteliale" },
+                  { "type": "reveal_card", "title": "Click pentru a vedea tipurile de Țesuturi Epiteliale", "content": "<b>1. De acoperire:</b> Învelesc suprafețe externe (epiderma) și interne (mucoasele tubului digestiv, căilor respiratorii). Au rol de protecție și de absorbție/secreție. <br><b>2. Secretoare (glandulare):</b> Formează glandele, fiind specializate în producerea și eliminarea de substanțe. Pot fi glande exocrine (cu canal de excreție, ex: glandele salivare) sau endocrine (fără canal, secretă hormoni direct în sânge, ex: tiroida). <br><b>3. Senzoriale:</b> Conțin celule specializate în recepționarea stimulilor din mediu, intrând în alcătuirea organelor de simț (ex: celulele gustative, celulele auditive)." },
+                  { "type": "heading", "level": "h3", "content": "Țesuturi Conjunctive" },
+                  { "type": "paragraph", "content": "Sunt cele mai diverse ca structură și funcții. Sunt formate din celule distanțate, fibre (de colagen, elastice) și o substanță fundamentală. Au rol de legătură, hrănire, susținere, apărare. După consistența substanței fundamentale, pot fi:" },
+                  { "type": "list", "items": [
+                      "<b>Moi:</b> țesutul lax, adipos (grăsos), fibros (în tendoane), elastic (în pereții vaselor de sânge).",
+                      "<b>Semidure (cartilaginoase):</b> formează cartilajele (hialin, elastic, fibros).",
+                      "<b>Dure (osos):</b> formează oasele; substanța fundamentală conține oseină impregnată cu săruri minerale.",
+                      "<b>Fluide:</b> sângele, considerat un tip special de țesut conjunctiv."
+                  ]},
+                  { "type": "heading", "level": "h3", "content": "Țesutul Muscular" },
+                  { "type": "paragraph", "content": "Este format din celule alungite (fibre musculare) care au proprietatea de a se contracta. Conțin organite specifice numite miofibrile." },
+                  { "type": "flip_card", "front": "Care sunt tipurile de țesut muscular?", "back": "Există trei tipuri: <b>striat</b> (în mușchii scheletici, contracție voluntară), <b>neted</b> (în pereții organelor interne, contracție involuntară) și <b>cardiac</b> (în inimă, este striat dar cu contracție involuntară și automată)." },
+                  { "type": "heading", "level": "h3", "content": "Țesutul Nervos" },
+                  { "type": "paragraph", "content": "Este format din două tipuri de celule: neuronii și celulele gliale (nevroglii). Neuronii sunt unitățile de bază, specializate în generarea și conducerea impulsurilor nervoase, asigurând recepționarea, prelucrarea și transmiterea informațiilor. Celulele gliale au rol de susținere, hrănire și protecție a neuronilor." },
+                  { "type": "separator" }
+              ]
+            }
           ]
         },
         {
-          "id": "genetica-x",
-          "titlu": "Genetică și Ereditate",
-          "descriere": "Principiile eredității, legile lui Mendel și bazele moleculare ale geneticii.",
-          "icon": "celula",
+          "id": "nutritie-x",
+          "titlu": "Funcțiile de Nutriție",
+          "descriere": "Procesele prin care organismele preiau, prelucrează și utilizează substanțele din mediu pentru a trăi.",
+          "icon": "default",
           "subcapitole": [
-            { "id": "genetica-intro", "titlu": "Concepte de bază în genetică" },
-            { "id": "genetica-mendeliana", "titlu": "Legile mendeliene ale eredității" },
-            { "id": "genetica-moleculara", "titlu": "Acizii nucleici - suportul informației genetice" }
+            {
+              "id": "nutritie-autotrofa-x",
+              "titlu": "Nutriția Autotrofă",
+              "content": [
+                { "type": "paragraph", "content": "Nutriția, în sens restrâns, reprezintă procesul de hrănire. În funcție de sursa de carbon utilizată pentru a sintetiza substanțele organice proprii, există două moduri fundamentale de nutriție: autotrofă și heterotrofă." },
+                { "type": "heading", "level": "h3", "content": "Nutriția Autotrofă" },
+                { "type": "paragraph", "content": "Este specifică organismelor capabile să-și sintetizeze substanțele organice (hrana) pornind de la substanțe anorganice, în special dioxid de carbon ($CO_2$). Aceste organisme se numesc autotrofe și sunt considerate <b>producătorii</b> în ecosisteme. Acest proces necesită o sursă externă de energie." },
+                { "type": "list", "items": [
+                  "<b>Fotosinteza:</b> Utilizează energia luminii solare. Este specifică plantelor verzi, algelor și cianobacteriilor.",
+                  "<b>Chemosinteza:</b> Utilizează energia chimică rezultată din oxidarea unor substanțe anorganice (ex: $H_2S, NH_3$). Este specifică unor grupuri de bacterii."
+                ]},
+                { "type": "heading", "level": "h3", "content": "Fotosinteza" },
+                { "type": "paragraph", "content": "Este procesul de sinteză a substanțelor organice din apă, $CO_2$ și săruri minerale, cu ajutorul energiei luminoase captate de pigmenții clorofilieni, având ca produs secundar oxigenul. Organul principal specializat pentru fotosinteză la plante este frunza." },
+                { "type": "image", "src": "img/fotosinteza-schema.png", "alt": "Schemă generală a fotosintezei" },
+                { "type": "reveal_card", "title": "Care sunt fazele fotosintezei?", "content": "<b>1. Faza de lumină:</b> Are loc în grana cloroplastelor și este dependentă de lumină. Energia luminoasă este captată de clorofilă și convertită în energie chimică stocată în molecule de ATP. Tot acum are loc fotoliza apei (descompunerea apei în hidrogen și oxigen), oxigenul fiind eliberat în atmosferă.<br><b>2. Faza de întuneric (Ciclul Calvin):</b> Are loc în stroma cloroplastelor și nu necesită direct lumină. Dioxidul de carbon este fixat și redus, folosind energia (ATP) și hidrogenul din faza de lumină, pentru a produce substanțe organice, în special glucoză." },
+                { "type": "paragraph", "content": "Importanța fotosintezei este vitală pentru viața pe Pământ, fiind principala sursă de substanțe organice și oxigen pentru majoritatea organismelor." }
+              ]
+            },
+            {
+              "id": "nutritie-heterotrofa-x",
+              "titlu": "Nutriția Heterotrofă și Digestia",
+              "content": [
+                { "type": "heading", "level": "h3", "content": "Nutriția Heterotrofă" },
+                { "type": "paragraph", "content": "Este specifică organismelor care nu-și pot sintetiza singure substanțele organice și trebuie să le preia din mediul extern, hrănindu-se cu alți indivizi sau cu produsele lor. Aceste organisme se numesc heterotrofe (consumatori, descompunători)." },
+                { "type": "list", "items": [
+                    "<b>Nutriția saprofită:</b> Organismele (majoritatea ciupercilor și bacteriilor) se hrănesc cu substanțe organice din organisme moarte sau din resturi organice, pe care le descompun. Au un rol crucial în circuitul materiei în natură.",
+                    "<b>Nutriția parazită:</b> Paraziții se hrănesc cu substanțe organice din corpul organismelor vii, numite gazde, pe care le prejudiciază (ex: viermii paraziți, bacteriile patogene, unele ciuperci).",
+                    "<b>Nutriția holozoică:</b> Specifică animalelor, implică ingestia hranei, digestia (prelucrarea ei), absorbția nutrimentelor și eliminarea resturilor nedigerate."
+                ]},
+                { "type": "heading", "level": "h3", "content": "Digestia la Mamifere" },
+                { "type": "paragraph", "content": "Digestia este procesul de prelucrare a hranei în tubul digestiv până la obținerea unor compuși simpli, absorbabili (nutrimente), prin transformări mecanice, fizice și chimice (hidroliză enzimatică)." },
+                { "type": "image", "src": "img/sistemul-digestiv-la-om.png", "alt": "Sistemul digestiv la om" },
+                { "type": "paragraph", "content": "Sistemul digestiv la mamifere este format din <b>tubul digestiv</b> (cavitate bucală, faringe, esofag, stomac, intestin subțire, intestin gros) și <b>glandele anexe</b> (glandele salivare, ficatul, pancreasul)." },
+                { "type": "flip_card", "front": "Ce este digestia chimică?", "back": "Este descompunerea moleculelor organice complexe din alimente (proteine, glucide, lipide) în molecule simple (aminoacizi, monozaharide, acizi grași) sub acțiunea unor enzime specifice, prezente în sucurile digestive (salivă, suc gastric, suc pancreatic, suc intestinal)." }
+              ]
+            }
           ]
         }
       ]
