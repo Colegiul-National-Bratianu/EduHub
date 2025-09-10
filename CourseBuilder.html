@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Style Course Builder - EduHub</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230ea5e9'%3E%3Cpath d='M14.06,9L15,9.94L5.94,19H5V18.06L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z' /%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      :root {
+        --brand-primary: #0ea5e9; --background-dark: #0f172a; --background-panel: #1e293b;
+        --text-light: #f1f5f9; --text-muted: #94a3b8; --border-color: #334155;
+      }
+      body { font-family: 'Work Sans', sans-serif; background-color: var(--background-dark); color: var(--text-light); }
+      
+      .component-wrapper { position: relative; border: 2px solid transparent; transition: border-color 0.2s; }
+      .component-wrapper.selected { border-color: var(--brand-primary); }
+      .component-controls {
+        position: absolute; top: -12px; right: 0; display: none; gap: 0.5rem;
+        background-color: var(--background-panel); padding: 0.25rem; border-radius: 0.5rem; z-index: 10;
+      }
+      .component-wrapper:hover .component-controls, .component-wrapper.selected .component-controls { display: flex; }
+      .component-controls button {
+        background-color: var(--border-color); width: 1.75rem; height: 1.75rem; border-radius: 0.25rem;
+        display: flex; align-items: center; justify-content: center;
+      }
+       .component-controls button.delete-btn:hover { background-color: #ef4444; }
+
+      /* Drag and Drop */
+      .sidebar-item { border: 1px solid var(--border-color); transition: all 0.2s ease; }
+      .sidebar-item:hover { border-color: var(--brand-primary); background-color: #2c3a51; transform: translateY(-2px); }
+      .drop-zone { border: 2px dashed var(--border-color); min-height: 80px; transition: all 0.2s; padding: 1rem; border-radius: 0.5rem; }
+      .drop-zone.drag-over { border-color: var(--brand-primary); background-color: rgba(14, 165, 233, 0.1); }
+      .drop-indicator { height: 3px; background-color: var(--brand-primary); border-radius: 2px; display: none; pointer-events: none; }
+      .component-wrapper.dragging { opacity: 0.5; }
+
+      /* Inspector Panel */
+      #inspector-panel label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-muted); }
+      #inspector-panel input, #inspector-panel textarea, #inspector-panel select {
+        width: 100%; background-color: var(--background-dark); border: 1px solid var(--border-color);
+        padding: 0.5rem; border-radius: 0.25rem; margin-bottom: 1rem;
+      }
+
+      /* Components */
+      .flip-card-builder { perspective: 1000px; }
+      .flip-card-builder-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+      .flip-card-builder.flipped .flip-card-builder-inner { transform: rotateY(180deg); }
+      .flip-card-builder-front, .flip-card-builder-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; align-items: center; justify-content: center; padding: 1rem; background-color: var(--background-panel); border: 1px solid var(--border-color); border-radius: 0.5rem; }
+      .flip-card-builder-back { transform: rotateY(180deg); }
+
+    </style>
+</head>
+<body class="antialiased">
+    <div id="app" class="h-screen flex flex-col">
+        <header class="bg-background-panel sticky top-0 z-20 p-4 flex justify-between items-center border-b-2 border-border-color shrink-0">
+            <h1 class="text-2xl font-bold">Blog Style Course Builder</h1>
+            <button id="export-json-btn" class="bg-brand-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600">Exportă JSON</button>
+        </header>
+
+        <div class="flex flex-1 overflow-hidden">
+            <aside id="sidebar" class="w-72 bg-background-panel border-r-2 border-border-color flex-col p-4 overflow-y-auto shrink-0">
+                 <!-- Sidebar items will be injected by JS -->
+            </aside>
+            
+            <main class="flex-1 overflow-y-auto p-8 lg:p-12 relative">
+                <div id="builder-container" class="space-y-4"></div>
+                <div class="drop-indicator absolute left-8 right-8"></div>
+            </main>
+            
+            <aside id="inspector-panel" class="w-96 bg-background-panel border-l-2 border-border-color flex-col p-4 overflow-y-auto shrink-0">
+                <h2 class="text-xl font-bold mb-4 border-b border-border-color pb-2">Inspector</h2>
+                <div id="inspector-content">
+                    <p class="text-text-muted">Selectează un element pentru a-l edita.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+    // NOTE: This is a simplified in-memory representation. 
+    // In a real app, you would use a proper library for deep cloning and state management.
+    const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const builderContainer = document.getElementById('builder-container');
+        const exportBtn = document.getElementById('export-json-btn');
+        const sidebar = document.getElementById('sidebar');
+        const inspectorContent = document.getElementById('inspector-content');
+        const dropIndicator = document.querySelector('.drop-indicator');
+
+        const COMPONENT_DEFAULTS = {
+            // Layouts
+            row_full: { type: 'layout', title: 'Rând Full', icon: '▅', data: { id: null, type: 'row_full', columns: [[]] } },
+            row_split: { type: 'layout', title: 'Rând 2 Coloane', icon: '◧', data: { id: null, type: 'row_split', columns: [[], []] } },
+            row_thirds: { type: 'layout', title: 'Rând 3 Coloane', icon: '◫', data: { id: null, type: 'row_thirds', columns: [[], [], []] } },
+            // Content
+            heading: { type: 'content', title: 'Titlu', icon: 'H1', data: { id: null, type: 'heading', content: 'Titlu Nou', level: 'h2' } },
+            paragraph: { type: 'content', title: 'Paragraf', icon: '¶', data: { id: null, type: 'paragraph', content: 'Acesta este un paragraf nou.' } },
+            image: { type: 'content', title: 'Imagine', icon: '🖼️', data: { id: null, type: 'image', src: 'https://placehold.co/600x300/1e293b/94a3b8?text=Imagine', alt: 'Placeholder' } },
+            list: { type: 'content', title: 'Listă', icon: '箇', data: { id: null, type: 'list', items: ['Punctul 1', 'Punctul 2'] } },
+            separator: { type: 'content', title: 'Separator', icon: '—', data: { id: null, type: 'separator' } },
+             // Interactive
+            flip_card: { type: 'interactive', title: 'Card Reversibil', icon: '🔄', data: { id: null, type: 'flip_card', front: 'Fața Cardului', back: 'Spatele Cardului' } },
+            reveal_card: { type: 'interactive', title: 'Card Revelabil', icon: '👇', data: { id: null, type: 'reveal_card', title: 'Apasă pentru a Revela', content: 'Acesta este conținutul ascuns.' } },
+        };
+
+        let pageData = [];
+        let selectedComponentId = null;
+        let idCounter = 0;
+
+        const generateId = () => `comp-${idCounter++}`;
+
+        const findComponent = (id, data = pageData) => {
+            for (const item of data) {
+                if (item.id === id) return { component: item, parent: data };
+                if (item.columns) {
+                    for (const col of item.columns) {
+                        const found = findComponent(id, col);
+                        if (found) return found;
+                    }
+                }
+            }
+            return null;
+        };
+
+        const initializeSidebar = () => {
+            sidebar.innerHTML = `
+                <div class="mb-6">
+                    <h2 class="text-xl font-bold mb-2 text-text-muted">Layout</h2>
+                    <div id="layout-items" class="space-y-3"></div>
+                </div>
+                <div class="mb-6">
+                     <h2 class="text-xl font-bold mb-2 text-text-muted">Conținut</h2>
+                    <div id="content-items" class="space-y-3"></div>
+                </div>
+                 <div class="mb-6">
+                     <h2 class="text-xl font-bold mb-2 text-text-muted">Interactiv</h2>
+                    <div id="interactive-items" class="space-y-3"></div>
+                </div>`;
+            const containers = {
+                layout: document.getElementById('layout-items'),
+                content: document.getElementById('content-items'),
+                interactive: document.getElementById('interactive-items')
+            };
+
+            Object.entries(COMPONENT_DEFAULTS).forEach(([key, comp]) => {
+                const button = document.createElement('div');
+                button.className = 'sidebar-item w-full p-3 rounded-lg flex items-center gap-3 text-left cursor-grab';
+                button.dataset.type = key;
+                button.draggable = true;
+                button.innerHTML = `<span class="text-2xl font-bold">${comp.icon}</span> <span class="font-semibold">${comp.title}</span>`;
+                button.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text/plain', key);
+                    e.dataTransfer.effectAllowed = 'copyMove';
+                });
+                containers[comp.type].appendChild(button);
+            });
+        };
+
+        const renderPage = () => {
+            builderContainer.innerHTML = '';
+            if (pageData.length === 0) {
+                 builderContainer.innerHTML = '<div class="drop-zone flex items-center justify-center p-12 text-text-muted">Trage un element de Layout aici pentru a începe.</div>';
+            } else {
+                pageData.forEach(row => builderContainer.appendChild(renderRow(row)));
+            }
+            setupActionListeners();
+        };
+
+        const renderRow = (rowData) => {
+            const rowWrapper = document.createElement('div');
+            rowWrapper.className = `component-wrapper relative p-2 ${rowData.id === selectedComponentId ? 'selected' : ''}`;
+            rowWrapper.dataset.id = rowData.id;
+            rowWrapper.draggable = true;
+            
+            const gridClasses = { row_full: '', row_split: 'grid md:grid-cols-2 gap-4', row_thirds: 'grid md:grid-cols-3 gap-4' };
+            const rowEl = document.createElement('div');
+            rowEl.className = gridClasses[rowData.type];
+
+            rowData.columns.forEach(colData => {
+                const colEl = document.createElement('div');
+                colEl.className = 'drop-zone space-y-4';
+                colData.forEach(compData => colEl.appendChild(renderComponent(compData)));
+                rowEl.appendChild(colEl);
+            });
+            
+            rowWrapper.innerHTML = `<div class="component-controls"><button class="delete-btn" title="Șterge Rând">✖</button></div>`;
+            rowWrapper.appendChild(rowEl);
+            return rowWrapper;
+        };
+        
+        const renderComponent = (compData) => {
+            const compWrapper = document.createElement('div');
+            compWrapper.className = `component-wrapper relative p-2 ${compData.id === selectedComponentId ? 'selected' : ''}`;
+            compWrapper.dataset.id = compData.id;
+            compWrapper.draggable = true;
+
+            let contentHTML = '';
+             switch(compData.type) {
+                case 'heading': contentHTML = `<${compData.level} class="text-3xl font-bold">${compData.content}</${compData.level}>`; break;
+                case 'paragraph': contentHTML = `<p class="text-lg leading-relaxed">${compData.content}</p>`; break;
+                case 'image': contentHTML = `<img src="${compData.src}" alt="${compData.alt}" class="w-full rounded-lg" />`; break;
+                case 'separator': contentHTML = `<hr class="border-border-color"/>`; break;
+                case 'list': contentHTML = `<ul class="list-disc list-inside space-y-2">${compData.items.map(item => `<li>${item}</li>`).join('')}</ul>`; break;
+                case 'flip_card': contentHTML = `<div class="flip-card-builder h-48 cursor-pointer" onclick="this.classList.toggle('flipped')"><div class="flip-card-builder-inner"><div class="flip-card-builder-front">${compData.front}</div><div class="flip-card-builder-back">${compData.back}</div></div></div>`; break;
+                case 'reveal_card': contentHTML = `<details class="bg-background-panel p-4 rounded-lg"><summary class="cursor-pointer font-semibold">${compData.title}</summary><div class="mt-2 pt-2 border-t border-border-color">${compData.content}</div></details>`; break;
+            }
+            compWrapper.innerHTML = `<div class="component-controls"><button class="delete-btn" title="Șterge Element">✖</button></div>` + contentHTML;
+            return compWrapper;
+        };
+
+        const renderInspector = () => {
+             if (!selectedComponentId) {
+                inspectorContent.innerHTML = '<p class="text-text-muted">Selectează un element pentru a-l edita.</p>';
+                return;
+            }
+            const { component } = findComponent(selectedComponentId);
+            if (!component) return;
+
+            let fieldsHTML = '';
+            const createInput = (key, label, value) => `<div class="mb-4"><label for="inspector-${key}">${label}</label><input type="text" id="inspector-${key}" data-key="${key}" value="${value}"></div>`;
+            const createTextarea = (key, label, value) => `<div class="mb-4"><label for="inspector-${key}">${label}</label><textarea id="inspector-${key}" data-key="${key}" rows="4">${value}</textarea></div>`;
+
+            switch(component.type) {
+                case 'heading':
+                    fieldsHTML += createInput('content', 'Text', component.content);
+                    fieldsHTML += `<div><label for="inspector-level">Nivel</label><select id="inspector-level" data-key="level"><option value="h1" ${component.level === 'h1' ? 'selected' : ''}>H1</option><option value="h2" ${component.level === 'h2' ? 'selected' : ''}>H2</option><option value="h3" ${component.level === 'h3' ? 'selected' : ''}>H3</option></select></div>`;
+                    break;
+                case 'paragraph': fieldsHTML += createTextarea('content', 'Text', component.content); break;
+                case 'image':
+                    fieldsHTML += createInput('src', 'URL Imagine', component.src);
+                    fieldsHTML += createInput('alt', 'Text Alternativ', component.alt);
+                    break;
+                case 'list': fieldsHTML += createTextarea('items', 'Elemente (unul pe linie)', component.items.join('\n')); break;
+                case 'flip_card':
+                    fieldsHTML += createInput('front', 'Text Față', component.front);
+                    fieldsHTML += createInput('back', 'Text Spate', component.back);
+                    break;
+                 case 'reveal_card':
+                    fieldsHTML += createInput('title', 'Text Buton', component.title);
+                    fieldsHTML += createTextarea('content', 'Conținut Ascuns', component.content);
+                    break;
+                default: fieldsHTML = '<p class="text-text-muted">Acest element nu are proprietăți editabile.</p>';
+            }
+            inspectorContent.innerHTML = fieldsHTML;
+        };
+
+        function updateComponentFromInspector(e) {
+            if (!selectedComponentId) return;
+            const { component } = findComponent(selectedComponentId);
+            const key = e.target.dataset.key;
+
+            if (key === 'items') {
+                component.items = e.target.value.split('\n');
+            } else {
+                component[key] = e.target.value;
+            }
+            renderPage();
+        }
+
+        function setupActionListeners() {
+            // Selection & Deletion
+            builderContainer.querySelectorAll('.component-wrapper').forEach(el => {
+                el.addEventListener('click', e => {
+                    e.stopPropagation();
+                    const id = e.currentTarget.dataset.id;
+                    if (e.target.closest('.delete-btn')) { // Delete button clicked
+                        const { component, parent } = findComponent(id);
+                        const index = parent.indexOf(component);
+                        if(confirm('Ești sigur că vrei să ștergi acest element?')) {
+                             parent.splice(index, 1);
+                             if (selectedComponentId === id) selectedComponentId = null;
+                             renderPage();
+                             renderInspector();
+                        }
+                    } else { // Select component
+                        selectedComponentId = id;
+                        renderPage();
+                        renderInspector();
+                    }
+                });
+            });
+        }
+        
+        // --- Drag & Drop Logic ---
+        let draggedElement = null;
+        document.addEventListener('dragstart', e => {
+            const type = e.target.dataset.type;
+            const id = e.target.dataset.id;
+            if (type) { // Dragging from sidebar
+                e.dataTransfer.setData('text/plain', type);
+                draggedElement = null;
+            } else if (id) { // Dragging existing component
+                e.dataTransfer.setData('text/plain', id);
+                draggedElement = e.target;
+                setTimeout(() => e.target.classList.add('dragging'), 0);
+            }
+        });
+        
+        document.addEventListener('dragend', e => {
+            draggedElement?.classList.remove('dragging');
+            draggedElement = null;
+        });
+
+        document.addEventListener('dragover', e => {
+            e.preventDefault();
+            const dropZone = e.target.closest('.drop-zone');
+            document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+            if(dropZone) dropZone.classList.add('drag-over');
+            // Drop indicator logic could be added here for more precision
+        });
+
+        document.addEventListener('drop', e => {
+            e.preventDefault();
+            document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+            const dropZone = e.target.closest('.drop-zone');
+            if (!dropZone) return;
+
+            const droppedData = e.dataTransfer.getData('text/plain');
+            const blueprint = COMPONENT_DEFAULTS[droppedData];
+
+            if (blueprint) { // It's a new component from sidebar
+                const newComponent = deepClone(blueprint.data);
+                newComponent.id = generateId();
+                const parentCol = findParentColumn(dropZone);
+                parentCol.push(newComponent);
+            } else { // It's an existing component being moved
+                const { component, parent } = findComponent(droppedData);
+                if (!component) return;
+                const targetCol = findParentColumn(dropZone);
+                // Simple append for now. Could be more precise.
+                targetCol.push(component);
+                const index = parent.indexOf(component);
+                parent.splice(index, 1);
+            }
+            renderPage();
+        });
+
+        const findParentColumn = (dropZoneEl) => {
+            let current = dropZoneEl;
+            while(current) {
+                const id = current.dataset.id;
+                if(id) {
+                    const { component } = findComponent(id);
+                    if(component && component.columns) {
+                        const colIndex = Array.from(current.children[1].children).indexOf(dropZoneEl);
+                        return component.columns[colIndex];
+                    }
+                }
+                current = current.parentElement;
+            }
+            return pageData; // Fallback for root drop
+        }
+
+        // --- Init ---
+        inspectorContent.addEventListener('input', updateComponentFromInspector);
+        exportBtn.addEventListener('click', () => {
+            console.log(JSON.stringify(pageData, null, 2));
+            alert("JSON-ul paginii a fost afișat în consolă (F12).");
+        });
+        initializeSidebar();
+        renderPage();
+    });
+    </script>
+</body>
+</html>
+

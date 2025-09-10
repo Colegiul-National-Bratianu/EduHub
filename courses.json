@@ -7,7 +7,6 @@
           "id": "celula-ix",
           "titlu": "Celula - Unitatea Vieții",
           "descriere": "Studiul detaliat al structurii și funcțiilor celulei, de la procariote la eucariote.",
-          "progres": 75,
           "icon": "celula",
           "subcapitole": [
             { "id": "celula-intro", "titlu": "Introducere în teoria celulară" },
@@ -20,7 +19,6 @@
           "id": "tesuturi-ix",
           "titlu": "Țesuturi Vegetale și Animale",
           "descriere": "Clasificarea și caracteristicile principalelor tipuri de țesuturi care formează organismele.",
-          "progres": 40,
           "icon": "tesuturi",
           "subcapitole": [
             { "id": "tesut-vegetal", "titlu": "Țesuturi vegetale" },
@@ -31,7 +29,6 @@
           "id": "reproducere-ix",
           "titlu": "Funcția de Reproducere",
           "descriere": "Mecanismele reproducerii în lumea vie, de la organisme unicelulare la cele complexe.",
-          "progres": 15,
           "icon": "reproducere",
           "subcapitole": [
             { "id": "reproducere-asexuata", "titlu": "Reproducerea asexuată" },
@@ -48,7 +45,6 @@
           "id": "anatomie-x",
           "titlu": "Anatomia și Fiziologia Umană",
           "descriere": "O explorare a sistemelor de organe ale corpului uman și a funcțiilor acestora.",
-          "progres": 0,
           "icon": "default",
           "subcapitole": [
             { "id": "sistem-nervos", "titlu": "Sistemul nervos" },
@@ -61,7 +57,6 @@
           "id": "genetica-x",
           "titlu": "Genetică și Ereditate",
           "descriere": "Principiile eredității, legile lui Mendel și bazele moleculare ale geneticii.",
-          "progres": 5,
           "icon": "celula",
           "subcapitole": [
             { "id": "genetica-intro", "titlu": "Concepte de bază în genetică" },
@@ -77,3 +72,4 @@
     }
   }
 }
+
