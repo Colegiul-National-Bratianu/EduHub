@@ -39,9 +39,27 @@
        .btn-secondary {
         @apply bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 border-2 border-white/50;
       }
-      .feature-card {
-        @apply bg-[var(--background-card)] p-6 rounded-2xl border border-[var(--border-color)] shadow-lg hover:border-[var(--brand-primary)] transition-all duration-300 transform hover:-translate-y-2;
+      /* Stil nou pentru cardurile din feed */
+      .feed-card {
+        @apply bg-[var(--background-card)] p-6 rounded-2xl border border-[var(--border-color)] shadow-lg hover:border-[var(--brand-primary)] transition-all duration-300 transform hover:-translate-y-2 block;
       }
+      .feed-card-header {
+         @apply flex items-center justify-between mb-3;
+      }
+      .feed-card-meta {
+        @apply text-sm font-semibold text-[var(--brand-primary)];
+      }
+      .feed-card-highlight {
+        @apply relative;
+      }
+      .feed-card-highlight p {
+         @apply text-xl md:text-2xl text-white font-medium relative z-10;
+      }
+      /* Iconița de "highlight" (stea) */
+      .feed-card-icon svg {
+        @apply w-5 h-5 text-yellow-400 opacity-70;
+      }
+
       .text-gradient {
         @apply bg-gradient-to-r from-white to-sky-300 text-transparent bg-clip-text;
       }
@@ -49,7 +67,7 @@
 </head>
 <body class="antialiased">
     <div class="flex flex-col min-h-screen">
-        <!-- Header Section -->
+        <!-- Header Section (Neschimbat) -->
         <header class="bg-black/30 backdrop-blur-md sticky top-0 z-50 border-b border-white/10">
             <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-3">
@@ -61,7 +79,7 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center gap-8">
                     <a href="courses.html" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Cursuri</a>
-                    <a href="#features" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Caracteristici</a>
+                    <a href="#feed" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Feed</a>
                     <a href="#" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Despre Noi</a>
                 </div>
                 <a href="courses.html" class="btn-primary hidden md:inline-block">Începe Acum</a>
@@ -76,7 +94,7 @@
             <div id="mobile-menu" class="hidden md:hidden bg-black/50 backdrop-blur-lg border-t border-white/10">
                 <div class="flex flex-col items-center gap-4 py-4">
                     <a href="courses.html" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Cursuri</a>
-                    <a href="#features" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Caracteristici</a>
+                    <a href="#feed" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Feed</a>
                     <a href="#" class="text-base text-[var(--text-muted)] hover:text-white transition-colors">Despre Noi</a>
                     <a href="courses.html" class="btn-primary mt-2 w-4/5 text-center">Începe Acum</a>
                 </div>
@@ -84,7 +102,7 @@
         </header>
 
         <main class="flex-grow">
-            <!-- Hero Section -->
+            <!-- Hero Section (Păstrat ca "mic welcome") -->
             <section class="relative py-24 md:py-40 text-center overflow-hidden">
                 <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop");'></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
@@ -98,34 +116,31 @@
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <a href="courses.html" class="btn-primary text-lg">Explorează Cursurile</a>
-                            <a href="#features" class="btn-secondary text-lg">Află mai mult</a>
+                            <a href="#feed" class="btn-secondary text-lg">Vezi Feed-ul</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Features Section -->
-            <section id="features" class="py-16 md:py-24">
+            <!-- NOUL EduFeed Section -->
+            <section id="feed" class="py-16 md:py-24">
                 <div class="container mx-auto px-6">
                     <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-                         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tot ce ai nevoie pentru a învăța eficient</h2>
-                        <p class="text-lg text-[var(--text-muted)]">Am creat instrumente moderne și intuitive, gândite special pentru nevoile tale.</p>
+                         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Feed Educațional</h2>
+                        <p class="text-lg text-[var(--text-muted)]">Descoperă idei cheie și curiozități din lecțiile noastre, alese aleatoriu pentru tine.</p>
                     </div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="feature-card">
-                            <div class="mb-4 inline-block p-3 bg-sky-500/10 rounded-xl border border-sky-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-sky-400"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Lecții Structurate</h3>
-                            <p class="text-[var(--text-muted)]">Materie organizată pe clase, capitole și subcapitole, conform programei școlare.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="mb-4 inline-block p-3 bg-green-500/10 rounded-xl border border-green-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-400"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Quiz-uri Interactive</h3>
-                            <p class="text-[var(--text-muted)]">Testează-ți cunoștințele după fiecare capitol și vezi unde mai ai de lucrat.</p>
-                        </div>
-                        <div class="feature-card">
-                           <div class="mb-4 inline-block p-3 bg-indigo-500/10 rounded-xl border border-indigo-500/20"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-400"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 3v18"></path><path d="M12 3v18"></path><path d="M17 3v18"></path></svg></div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Flashcard-uri</h3>
-                            <p class="text-[var(--text-muted)]">O metodă eficientă de a memora termeni cheie și concepte importante.</p>
+                    
+                    <!-- Container pentru Feed (stil TikTok/Instagram) -->
+                    <div id="feed-container" class="max-w-3xl mx-auto flex flex-col gap-8">
+                        <!-- Cardurile de feed vor fi injectate aici de JavaScript -->
+                        
+                        <!-- Stare de încărcare -->
+                        <div id="feed-loading" class="text-center text-[var(--text-muted)] py-16">
+                            <svg class="animate-spin h-8 w-8 text-[var(--brand-primary)] mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <p class="mt-4 text-lg font-semibold">Se încarcă feed-ul...</p>
                         </div>
                     </div>
                 </div>
@@ -136,7 +151,7 @@
         <footer class="border-t border-white/10">
             <div class="container mx-auto px-6 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
-                    <p class="text-[var(--text-muted)] text-sm">© 2025 EduHub.</p>
+                    <p class="text-[var(--text-muted)] text-sm">© 2025 EduHub. Un proiect Bratianu</p>
                     <div class="flex flex-wrap justify-center gap-6">
                         <a href="#" class="text-sm text-[var(--text-muted)] hover:text-white transition-colors">Termeni și Condiții</a>
                         <a href="#" class="text-sm text-[var(--text-muted)] hover:text-white transition-colors">Politică de Confidențialitate</a>
@@ -149,27 +164,116 @@
 
     
     <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuOpenIcon = document.getElementById('menu-open-icon');
-        const menuCloseIcon = document.getElementById('menu-close-icon');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script meniu mobil (neschimbat)
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOpenIcon = document.getElementById('menu-open-icon');
+            const menuCloseIcon = document.getElementById('menu-close-icon');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuOpenIcon.classList.toggle('hidden');
-            menuCloseIcon.classList.toggle('hidden');
-        });
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden');
+                menuCloseIcon.classList.toggle('hidden');
+            });
 
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            // Script smooth scroll (actualizat să includă #feed)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
+
+            // *** NOUL SCRIPT PENTRU EDU-FEED ***
+            const loadFeed = async () => {
+                const feedContainer = document.getElementById('feed-container');
+                const feedLoading = document.getElementById('feed-loading');
+                let allHighlights = [];
+
+                try {
+                    // 1. Încarcă JSON
+                    const response = await fetch('courses.json');
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const data = await response.json();
+                    const biologie = data.biologie;
+
+                    // 2. Extrage și aplatizează toate highlights
+                    for (const classKey in biologie) {
+                        const clasa = biologie[classKey];
+                        const className = clasa.nume; // ex: "Clasa a X-a"
+
+                        for (const capitol of clasa.capitole) {
+                            for (const subcapitol of capitol.subcapitole) {
+                                const lessonName = subcapitol.titlu; // ex: "Țesuturi Vegetale"
+                                const lessonLink = subcapitol.link; // ex: "curs.html?id=..."
+
+                                if (subcapitol.highlights && subcapitol.highlights.length > 0) {
+                                    for (const highlightText of subcapitol.highlights) {
+                                        allHighlights.push({
+                                            highlight: highlightText,
+                                            lesson: lessonName,
+                                            class: className,
+                                            link: lessonLink
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 3. Amestecă aleatoriu array-ul (stil TikTok)
+                    allHighlights.sort(() => 0.5 - Math.random());
+
+                    // 4. Ascunde loading și pregătește containerul
+                    feedLoading.style.display = 'none';
+                    feedContainer.innerHTML = ''; // Curăță containerul
+
+                    if (allHighlights.length === 0) {
+                        feedContainer.innerHTML = '<p class="text-center text-[var(--text-muted)]">Nu s-au găsit highlights de afișat.</p>';
+                        return;
+                    }
+
+                    // 5. Construiește și injectează cardurile HTML
+                    allHighlights.forEach(item => {
+                        const card = document.createElement('a');
+                        card.href = item.link;
+                        card.className = "feed-card"; // Folosește stilul definit în <head>
+                        
+                        card.innerHTML = `
+                            <div class="feed-card-header">
+                                <span class="feed-card-meta">${item.class} &bull; ${item.lesson}</span>
+                                <div class="feed-card-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                                </div>
+                            </div>
+                            <div class="feed-card-highlight">
+                                <p>${item.highlight}</p>
+                            </div>
+                        `;
+                        feedContainer.appendChild(card);
+                    });
+
+                } catch (error) {
+                    // Gestionează erorile
+                    console.error("A eșuat încărcarea feed-ului:", error);
+                    feedLoading.style.display = 'none';
+                    feedContainer.innerHTML = `
+                        <div class="text-center text-red-400 p-8 bg-[var(--background-card)] rounded-lg">
+                            <p><b>Eroare!</b> Nu am putut încărca feed-ul.</p>
+                            <p class="text-sm text-[var(--text-muted)] mt-2">Te rugăm să încerci din nou mai târziu.</p>
+                        </div>`;
+                }
+            };
+
+            // Pornește încărcarea feed-ului
+            loadFeed();
         });
     </script>
 </body>
 </html>
-

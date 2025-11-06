@@ -9,10 +9,45 @@
           "descriere": "Studiul detaliat al structurii și funcțiilor celulei, de la procariote la eucariote.",
           "icon": "celula",
           "subcapitole": [
-            { "id": "celula-intro", "titlu": "Introducere în teoria celulară", "content": [] },
-            { "id": "celula-tipuri", "titlu": "Celula procariotă și eucariotă", "content": [] },
-            { "id": "celula-componente", "titlu": "Componentele celulei eucariote", "content": [] },
-            { "id": "celula-diviziune", "titlu": "Diviziunea celulară: Mitoza și Meioza", "content": [] }
+            {
+              "id": "celula-intro",
+              "titlu": "Introducere în teoria celulară",
+              "content": [],
+              "highlights": [
+                "Toate organismele sunt alcătuite din una sau mai multe celule.",
+                "Celula este unitatea structurală și funcțională a materiei vii."
+              ],
+              "link": "curs.html?id=celula-ix#celula-intro"
+            },
+            {
+              "id": "celula-tipuri",
+              "titlu": "Celula procariotă și eucariotă",
+              "content": [],
+              "highlights": [
+                "Celula procariotă nu are un nucleu adevărat (materialul genetic este liber în citoplasmă).",
+                "Celula eucariotă are un nucleu bine definit, delimitat de o membrană."
+              ],
+              "link": "curs.html?id=celula-ix#celula-tipuri"
+            },
+            {
+              "id": "celula-componente",
+              "titlu": "Componentele celulei eucariote",
+              "content": [],
+              "highlights": [
+                "Organitele celulare sunt 'fabricile' specializate ale celulei (ex. mitocondriile pentru energie, cloroplastele pentru fotosinteză)."
+              ],
+              "link": "curs.html?id=celula-ix#celula-componente"
+            },
+            {
+              "id": "celula-diviziune",
+              "titlu": "Diviziunea celulară: Mitoza și Meioza",
+              "content": [],
+              "highlights": [
+                "Mitoza produce celule identice (creștere, reparare).",
+                "Meioza produce celule sexuale (gameți) cu numărul de cromozomi înjumătățit."
+              ],
+              "link": "curs.html?id=celula-ix#celula-diviziune"
+            }
           ]
         }
       ]
@@ -30,44 +65,122 @@
               "id": "tesut-vegetal-x",
               "titlu": "Țesuturi Vegetale",
               "content": [
-                { "type": "paragraph", "content": "La organismele pluricelulare, celulele se specializează pentru anumite funcții, formând țesuturi. Acestea sunt grupări de celule interdependente care au aceeași origine, formă, structură și funcție. Știința care studiază țesuturile se numește histologie." },
-                { "type": "paragraph", "content": "După gradul de diferențiere a celulelor distingem două tipuri de țesuturi vegetale: țesuturi embrionare și țesuturi definitive." },
-                { "type": "heading", "level": "h3", "content": "Țesuturi Embrionare (Meristeme)" },
-                { "type": "paragraph", "content": "Sunt formate din celule care se divid activ, generând celule noi ce se vor diferenția în țesuturi definitive. Celulele meristematice sunt mici, rotunjite, cu pereți subțiri și fără spații libere între ele. Ele asigură creșterea în lungime a plantei (prin meristemele apicale, aflate în vârfurile rădăcinilor și tulpinilor) și creșterea în grosime (prin meristemele secundare, cum ar fi cambiul)." },
-                { "type": "heading", "level": "h3", "content": "Țesuturi Definitive" },
-                { "type": "paragraph", "content": "Conțin celule specializate care, de regulă, nu se mai divid. Se clasifică în mai multe categorii, în funcție de rolul principal pe care îl îndeplinesc." },
-                { "type": "list", "items": [
+                {
+                  "type": "paragraph",
+                  "content": "La organismele pluricelulare, celulele se specializează pentru anumite funcții, formând țesuturi. Acestea sunt grupări de celule interdependente care au aceeași origine, formă, structură și funcție. Știința care studiază țesuturile se numește histologie."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "După gradul de diferențiere a celulelor distingem două tipuri de țesuturi vegetale: țesuturi embrionare și țesuturi definitive."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesuturi Embrionare (Meristeme)"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Sunt formate din celule care se divid activ, generând celule noi ce se vor diferenția în țesuturi definitive. Celulele meristematice sunt mici, rotunjite, cu pereți subțiri și fără spații libere între ele. Ele asigură creșterea în lungime a plantei (prin meristemele apicale, aflate în vârfurile rădăcinilor și tulpinilor) și creșterea în grosime (prin meristemele secundare, cum ar fi cambiul)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesuturi Definitive"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Conțin celule specializate care, de regulă, nu se mai divid. Se clasifică în mai multe categorii, în funcție de rolul principal pe care îl îndeplinesc."
+                },
+                {
+                  "type": "list",
+                  "items": [
                     "<b>Țesuturi de apărare:</b> Acoperă și protejează organele plantei. Exemple: epiderma (la organele tinere), suberul (scoarța la organele cu creștere secundară).",
                     "<b>Țesuturi fundamentale (parenchimatice):</b> Produc sau depozitează substanțe. Exemple: țesutul asimilator din frunze (bogat în cloroplaste pentru fotosinteză), țesutul de depozitare din tuberculi sau semințe (depozitează amidon, uleiuri).",
                     "<b>Țesuturi conducătoare:</b> Asigură transportul sevei prin corpul plantei. Sunt de două tipuri: vasele lemnoase (xilem), care transportă seva brută (apă cu săruri minerale) de la rădăcină la frunze, și vasele liberiene (floem), care transportă seva elaborată (substanțe organice) de la frunze la restul organelor.",
                     "<b>Țesuturi mecanice (de susținere):</b> Oferă rezistență și elasticitate plantei. Exemple: colenchimul (celule vii, cu pereți îngroșați neuniform) și sclerenchimul (celule moarte, cu pereți îngroșați uniform).",
                     "<b>Țesuturi secretoare:</b> Produc și elimină diverse substanțe precum rășina (la conifere), nectarul (în flori), latexul (la păpădie) sau arome."
-                ]},
-                { "type": "flip_card", "front": "Ce este epiderma?", "back": "Este un țesut de apărare, de regulă format dintr-un singur strat de celule, ce acoperă organele tinere ale plantei, precum frunzele și tulpinile ierboase. Conține stomate, care permit schimbul de gaze." }
-              ]
+                  ]
+                },
+                {
+                  "type": "flip_card",
+                  "front": "Ce este epiderma?",
+                  "back": "Este un țesut de apărare, de regulă format dintr-un singur strat de celule, ce acoperă organele tinere ale plantei, precum frunzele și tulpinile ierboase. Conține stomate, care permit schimbul de gaze."
+                }
+              ],
+              "highlights": [
+                "Meristemele sunt țesuturi care se divid activ.",
+                "Țesuturile definitive se clasifică în: de apărare, fundamentale, conducătoare, mecanice și secretoare."
+              ],
+              "link": "curs.html?id=tesuturi-x#tesut-vegetal-x"
             },
             {
               "id": "tesut-animal-x",
               "titlu": "Țesuturi Animale",
               "content": [
-                  { "type": "paragraph", "content": "Corpul animalelor este format din patru tipuri fundamentale de țesuturi, care se diferențiază în timpul dezvoltării embrionare: epiteliale, conjunctive, muscular și nervos." },
-                  { "type": "heading", "level": "h3", "content": "Țesuturi Epiteliale" },
-                  { "type": "reveal_card", "title": "Click pentru a vedea tipurile de Țesuturi Epiteliale", "content": "<b>1. De acoperire:</b> Învelesc suprafețe externe (epiderma) și interne (mucoasele tubului digestiv, căilor respiratorii). Au rol de protecție și de absorbție/secreție. <br><b>2. Secretoare (glandulare):</b> Formează glandele, fiind specializate în producerea și eliminarea de substanțe. Pot fi glande exocrine (cu canal de excreție, ex: glandele salivare) sau endocrine (fără canal, secretă hormoni direct în sânge, ex: tiroida). <br><b>3. Senzoriale:</b> Conțin celule specializate în recepționarea stimulilor din mediu, intrând în alcătuirea organelor de simț (ex: celulele gustative, celulele auditive)." },
-                  { "type": "heading", "level": "h3", "content": "Țesuturi Conjunctive" },
-                  { "type": "paragraph", "content": "Sunt cele mai diverse ca structură și funcții. Sunt formate din celule distanțate, fibre (de colagen, elastice) și o substanță fundamentală. Au rol de legătură, hrănire, susținere, apărare. După consistența substanței fundamentale, pot fi:" },
-                  { "type": "list", "items": [
-                      "<b>Moi:</b> țesutul lax, adipos (grăsos), fibros (în tendoane), elastic (în pereții vaselor de sânge).",
-                      "<b>Semidure (cartilaginoase):</b> formează cartilajele (hialin, elastic, fibros).",
-                      "<b>Dure (osos):</b> formează oasele; substanța fundamentală conține oseină impregnată cu săruri minerale.",
-                      "<b>Fluide:</b> sângele, considerat un tip special de țesut conjunctiv."
-                  ]},
-                  { "type": "heading", "level": "h3", "content": "Țesutul Muscular" },
-                  { "type": "paragraph", "content": "Este format din celule alungite (fibre musculare) care au proprietatea de a se contracta. Conțin organite specifice numite miofibrile." },
-                  { "type": "flip_card", "front": "Care sunt tipurile de țesut muscular?", "back": "Există trei tipuri: <b>striat</b> (în mușchii scheletici, contracție voluntară), <b>neted</b> (în pereții organelor interne, contracție involuntară) și <b>cardiac</b> (în inimă, este striat dar cu contracție involuntară și automată)." },
-                  { "type": "heading", "level": "h3", "content": "Țesutul Nervos" },
-                  { "type": "paragraph", "content": "Este format din două tipuri de celule: neuronii și celulele gliale (nevroglii). Neuronii sunt unitățile de bază, specializate în generarea și conducerea impulsurilor nervoase, asigurând recepționarea, prelucrarea și transmiterea informațiilor. Celulele gliale au rol de susținere, hrănire și protecție a neuronilor." },
-                  { "type": "separator" }
-              ]
+                {
+                  "type": "paragraph",
+                  "content": "Corpul animalelor este format din patru tipuri fundamentale de țesuturi, care se diferențiază în timpul dezvoltării embrionare: epiteliale, conjunctive, muscular și nervos."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesuturi Epiteliale"
+                },
+                {
+                  "type": "reveal_card",
+                  "title": "Click pentru a vedea tipurile de Țesuturi Epiteliale",
+                  "content": "<b>1. De acoperire:</b> Învelesc suprafețe externe (epiderma) și interne (mucoasele tubului digestiv, căilor respiratorii). Au rol de protecție și de absorbție/secreție. <br><b>2. Secretoare (glandulare):</b> Formează glandele, fiind specializate în producerea și eliminarea de substanțe. Pot fi glande exocrine (cu canal de excreție, ex: glandele salivare) sau endocrine (fără canal, secretă hormoni direct în sânge, ex: tiroida). <br><b>3. Senzoriale:</b> Conțin celule specializate în recepționarea stimulilor din mediu, intrând în alcătuirea organelor de simț (ex: celulele gustative, celulele auditive)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesuturi Conjunctive"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Sunt cele mai diverse ca structură și funcții. Sunt formate din celule distanțate, fibre (de colagen, elastice) și o substanță fundamentală. Au rol de legătură, hrănire, susținere, apărare. După consistența substanței fundamentale, pot fi:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Moi:</b> țesutul lax, adipos (grăsos), fibros (în tendoane), elastic (în pereții vaselor de sânge).",
+                    "<b>Semidure (cartilaginoase):</b> formează cartilajele (hialin, elastic, fibros).",
+                    "<b>Dure (osos):</b> formează oasele; substanța fundamentală conține oseină impregnată cu săruri minerale.",
+                    "<b>Fluide:</b> sângele, considerat un tip special de țesut conjunctiv."
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesutul Muscular"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este format din celule alungite (fibre musculare) care au proprietatea de a se contracta. Conțin organite specifice numite miofibrile."
+                },
+                {
+                  "type": "flip_card",
+                  "front": "Care sunt tipurile de țesut muscular?",
+                  "back": "Există trei tipuri: <b>striat</b> (în mușchii scheletici, contracție voluntară), <b>neted</b> (în pereții organelor interne, contracție involuntară) și <b>cardiac</b> (în inimă, este striat dar cu contracție involuntară și automată)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Țesutul Nervos"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este format din două tipuri de celule: neuronii și celulele gliale (nevroglii). Neuronii sunt unitățile de bază, specializate în generarea și conducerea impulsurilor nervoase, asigurând recepționarea, prelucrarea și transmiterea informațiilor. Celulele gliale au rol de susținere, hrănire și protecție a neuronilor."
+                },
+                {
+                  "type": "separator"
+                }
+              ],
+              "highlights": [
+                "Există patru tipuri fundamentale de țesuturi animale: epitelial, conjunctiv, muscular și nervos.",
+                "Sângele este considerat un țesut conjunctiv fluid."
+              ],
+              "link": "curs.html?id=tesuturi-x#tesut-animal-x"
             }
           ]
         },
@@ -81,37 +194,677 @@
               "id": "nutritie-autotrofa-x",
               "titlu": "Nutriția Autotrofă",
               "content": [
-                { "type": "paragraph", "content": "Nutriția, în sens restrâns, reprezintă procesul de hrănire. În funcție de sursa de carbon utilizată pentru a sintetiza substanțele organice proprii, există două moduri fundamentale de nutriție: autotrofă și heterotrofă." },
-                { "type": "heading", "level": "h3", "content": "Nutriția Autotrofă" },
-                { "type": "paragraph", "content": "Este specifică organismelor capabile să-și sintetizeze substanțele organice (hrana) pornind de la substanțe anorganice, în special dioxid de carbon ($CO_2$). Aceste organisme se numesc autotrofe și sunt considerate <b>producătorii</b> în ecosisteme. Acest proces necesită o sursă externă de energie." },
-                { "type": "list", "items": [
-                  "<b>Fotosinteza:</b> Utilizează energia luminii solare. Este specifică plantelor verzi, algelor și cianobacteriilor.",
-                  "<b>Chemosinteza:</b> Utilizează energia chimică rezultată din oxidarea unor substanțe anorganice (ex: $H_2S, NH_3$). Este specifică unor grupuri de bacterii."
-                ]},
-                { "type": "heading", "level": "h3", "content": "Fotosinteza" },
-                { "type": "paragraph", "content": "Este procesul de sinteză a substanțelor organice din apă, $CO_2$ și săruri minerale, cu ajutorul energiei luminoase captate de pigmenții clorofilieni, având ca produs secundar oxigenul. Organul principal specializat pentru fotosinteză la plante este frunza." },
-                { "type": "image", "src": "img/fotosinteza-schema.png", "alt": "Schemă generală a fotosintezei" },
-                { "type": "reveal_card", "title": "Care sunt fazele fotosintezei?", "content": "<b>1. Faza de lumină:</b> Are loc în grana cloroplastelor și este dependentă de lumină. Energia luminoasă este captată de clorofilă și convertită în energie chimică stocată în molecule de ATP. Tot acum are loc fotoliza apei (descompunerea apei în hidrogen și oxigen), oxigenul fiind eliberat în atmosferă.<br><b>2. Faza de întuneric (Ciclul Calvin):</b> Are loc în stroma cloroplastelor și nu necesită direct lumină. Dioxidul de carbon este fixat și redus, folosind energia (ATP) și hidrogenul din faza de lumină, pentru a produce substanțe organice, în special glucoză." },
-                { "type": "paragraph", "content": "Importanța fotosintezei este vitală pentru viața pe Pământ, fiind principala sursă de substanțe organice și oxigen pentru majoritatea organismelor." }
-              ]
+                {
+                  "type": "paragraph",
+                  "content": "Nutriția, în sens restrâns, reprezintă procesul de hrănire. În funcție de sursa de carbon utilizată pentru a sintetiza substanțele organice proprii, există două moduri fundamentale de nutriție: autotrofă și heterotrofă."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Nutriția Autotrofă"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este specifică organismelor capabile să-și sintetizeze substanțele organice (hrana) pornind de la substanțe anorganice, în special dioxid de carbon ($CO_2$). Aceste organisme se numesc autotrofe și sunt considerate <b>producătorii</b> în ecosisteme. Acest proces necesită o sursă externă de energie."
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Fotosinteza:</b> Utilizează energia luminii solare. Este specifică plantelor verzi, algelor și cianobacteriilor.",
+                    "<b>Chemosinteza:</b> Utilizează energia chimică rezultată din oxidarea unor substanțe anorganice (ex: $H_2S, NH_3$). Este specifică unor grupuri de bacterii."
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Fotosinteza"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este procesul de sinteză a substanțelor organice din apă, $CO_2$ și săruri minerale, cu ajutorul energiei luminoase captate de pigmenții clorofilieni, având ca produs secundar oxigenul. Organul principal specializat pentru fotosinteză la plante este frunza."
+                },
+                {
+                  "type": "image",
+                  "src": "img/fotosinteza-schema.png",
+                  "alt": "Schemă generală a fotosintezei"
+                },
+                {
+                  "type": "reveal_card",
+                  "title": "Care sunt fazele fotosintezei?",
+                  "content": "<b>1. Faza de lumină:</b> Are loc în grana cloroplastelor și este dependentă de lumină. Energia luminoasă este captată de clorofilă și convertită în energie chimică stocată în molecule de ATP. Tot acum are loc fotoliza apei (descompunerea apei în hidrogen și oxigen), oxigenul fiind eliberat în atmosferă.<br><b>2. Faza de întuneric (Ciclul Calvin):</b> Are loc în stroma cloroplastelor și nu necesită direct lumină. Dioxidul de carbon este fixat și redus, folosind energia (ATP) și hidrogenul din faza de lumină, pentru a produce substanțe organice, în special glucoză."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Importanța fotosintezei este vitală pentru viața pe Pământ, fiind principala sursă de substanțe organice și oxigen pentru majoritatea organismelor."
+                }
+              ],
+              "highlights": [
+                "Fotosinteza convertește energia luminoasă în energie chimică.",
+                "Fotosinteza are o fază de lumină și o fază de întuneric (Ciclul Calvin)."
+              ],
+              "link": "curs.html?id=nutritie-x#nutritie-autotrofa-x"
             },
             {
               "id": "nutritie-heterotrofa-x",
               "titlu": "Nutriția Heterotrofă și Digestia",
               "content": [
-                { "type": "heading", "level": "h3", "content": "Nutriția Heterotrofă" },
-                { "type": "paragraph", "content": "Este specifică organismelor care nu-și pot sintetiza singure substanțele organice și trebuie să le preia din mediul extern, hrănindu-se cu alți indivizi sau cu produsele lor. Aceste organisme se numesc heterotrofe (consumatori, descompunători)." },
-                { "type": "list", "items": [
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Nutriția Heterotrofă"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este specifică organismelor care nu-și pot sintetiza singure substanțele organice și trebuie să le preia din mediul extern, hrănindu-se cu alți indivizi sau cu produsele lor. Aceste organisme se numesc heterotrofe (consumatori, descompunători)."
+                },
+                {
+                  "type": "list",
+                  "items": [
                     "<b>Nutriția saprofită:</b> Organismele (majoritatea ciupercilor și bacteriilor) se hrănesc cu substanțe organice din organisme moarte sau din resturi organice, pe care le descompun. Au un rol crucial în circuitul materiei în natură.",
                     "<b>Nutriția parazită:</b> Paraziții se hrănesc cu substanțe organice din corpul organismelor vii, numite gazde, pe care le prejudiciază (ex: viermii paraziți, bacteriile patogene, unele ciuperci).",
                     "<b>Nutriția holozoică:</b> Specifică animalelor, implică ingestia hranei, digestia (prelucrarea ei), absorbția nutrimentelor și eliminarea resturilor nedigerate."
-                ]},
-                { "type": "heading", "level": "h3", "content": "Digestia la Mamifere" },
-                { "type": "paragraph", "content": "Digestia este procesul de prelucrare a hranei în tubul digestiv până la obținerea unor compuși simpli, absorbabili (nutrimente), prin transformări mecanice, fizice și chimice (hidroliză enzimatică)." },
-                { "type": "image", "src": "img/sistemul-digestiv-la-om.png", "alt": "Sistemul digestiv la om" },
-                { "type": "paragraph", "content": "Sistemul digestiv la mamifere este format din <b>tubul digestiv</b> (cavitate bucală, faringe, esofag, stomac, intestin subțire, intestin gros) și <b>glandele anexe</b> (glandele salivare, ficatul, pancreasul)." },
-                { "type": "flip_card", "front": "Ce este digestia chimică?", "back": "Este descompunerea moleculelor organice complexe din alimente (proteine, glucide, lipide) în molecule simple (aminoacizi, monozaharide, acizi grași) sub acțiunea unor enzime specifice, prezente în sucurile digestive (salivă, suc gastric, suc pancreatic, suc intestinal)." }
-              ]
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Digestia la Mamifere"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Digestia este procesul de prelucrare a hranei în tubul digestiv până la obținerea unor compuși simpli, absorbabili (nutrimente), prin transformări mecanice, fizice și chimice (hidroliză enzimatică)."
+                },
+                {
+                  "type": "image",
+                  "src": "img/sistemul-digestiv-la-om.png",
+                  "alt": "Sistemul digestiv la om"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Sistemul digestiv la mamifere este format din <b>tubul digestiv</b> (cavitate bucală, faringe, esofag, stomac, intestin subțire, intestin gros) și <b>glandele anexe</b> (glandele salivare, ficatul, pancreasul)."
+                },
+                {
+                  "type": "flip_card",
+                  "front": "Ce este digestia chimică?",
+                  "back": "Este descompunerea moleculelor organice complexe din alimente (proteine, glucide, lipide) în molecule simple (aminoacizi, monozaharide, acizi grași) sub acțiunea unor enzime specifice, prezente în sucurile digestive (salivă, suc gastric, suc pancreatic, suc intestinal)."
+                }
+              ],
+              "highlights": [
+                "Nutriția heterotrofă poate fi saprofită, parazită sau holozoică.",
+                "Digestia la mamifere implică transformări mecanice, fizice și chimice (enzimatice)."
+              ],
+              "link": "curs.html?id=nutritie-x#nutritie-heterotrofa-x"
+            }
+          ]
+        },
+        {
+          "id": "respiratia-x",
+          "titlu": "Funcția de Respirație",
+          "descriere": "Procesele de eliberare a energiei din substanțele organice, la plante și animale.",
+          "icon": "default",
+          "subcapitole": [
+            {
+              "id": "respiratia-intro-x",
+              "titlu": "Respirația Aerobă și Anaerobă",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Respirația este procesul prin care organismele mobilizează energia stocată în substanțele organice în vederea utilizării acesteia. Se realizează prin reacții de oxidoreducere în interiorul celulelor."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Respirația Aerobă"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Constă în oxidarea completă a substanțelor organice, cu consum de oxigen, până la compuși anorganici ($CO_2$ și $H_2O$). Este un proces foarte eficient energetic. Ecuația generală: substanțe organice + $O_2$ → $CO_2$ + $H_2O$ + Energie (multă, stocată în ATP)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Respirația Anaerobă"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Constă în oxidarea parțială a substanțelor organice, în absența oxigenului. Rezultă compuși organici și o cantitate mică de energie. La microorganisme se numește fermentație (ex. alcoolică, lactică)."
+                }
+              ],
+              "highlights": [
+                "Respirația eliberează energia stocată în substanțele organice.",
+                "ATP este 'moneda energetică universală' a celulei."
+              ],
+              "link": "curs.html?id=respiratia-x#respiratia-intro-x"
+            },
+            {
+              "id": "respiratia-plante-x",
+              "titlu": "Respirația la Plante",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Toate celulele vii ale plantei respiră, atât la lumină, cât și la întuneric. Respirația este mai intensă în organele cu activitate metabolică ridicată (meristeme, flori, frunze tinere). Schimbul de gaze ($O_2$ și $CO_2$) se realizează predominant prin stomate."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Intensitatea respirației este influențată de factori interni (vârstă, cantitatea de substanțe organice) și externi (temperatură, concentrația $O_2$ și $CO_2$)."
+                }
+              ],
+              "highlights": [
+                "Respirația la plante este mai intensă în frunze, flori și meristeme.",
+                "Factorii de mediu, precum temperatura și umiditatea, influențează intensitatea respirației."
+              ],
+              "link": "curs.html?id=respiratia-x#respiratia-plante-x"
+            },
+            {
+              "id": "respiratia-animale-x",
+              "titlu": "Sistemul Respirator la Mamifere",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "La mamifere, respirația implică schimbul de gaze la nivelul plămânilor (respirație pulmonară) și transportul gazelor prin sânge."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Componente"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Căi respiratorii:</b> Fose nazale, faringe, laringe, trahee, bronhii. Au rolul de a conduce, purifica, umezi și încălzi aerul.",
+                    "<b>Plămânii:</b> Organe pereche, cu structură buretoasă. Unitatea structurală și funcțională este alveola pulmonară, la nivelul căreia are loc schimbul de gaze (hematoza) cu sângele din capilare."
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Ventilația Pulmonară"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este procesul de reîmprospătare a aerului din plămâni, având două etape: <b>inspirația</b> (proces activ, prin contracția mușchilor diafragm și intercostali, mărind volumul cutiei toracice) și <b>expirația</b> (proces de obicei pasiv, prin relaxarea mușchilor și revenirea cutiei toracice)."
+                }
+              ],
+              "highlights": [
+                "La mamifere, schimbul de gaze are loc la nivelul alveolelor pulmonare.",
+                "Inspirația este un proces activ (contracția diafragmului), iar expirația este de obicei un proces pasiv."
+              ],
+              "link": "curs.html?id=respiratia-x#respiratia-animale-x"
+            },
+            {
+              "id": "respiratia-vertebrate-x",
+              "titlu": "Diversitatea Respirației la Vertebrate",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Adaptarea la medii diferite a dus la diverse tipuri de respirație:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Pești:</b> Respirație branhială (extrag $O_2$ dizolvat în apă).",
+                    "<b>Amfibieni:</b> Respirație cutanată (prin pielea subțire și umedă) și pulmonară (plămâni saculari, simpli).",
+                    "<b>Reptile:</b> Respirație exclusiv pulmonară, plămâni mai complex structurați (septați).",
+                    "<b>Păsări:</b> Cel mai eficient sistem. Plămâni mici, rigizi, conectați la 9 saci aerieni. Aerul circulă într-un singur sens prin plămâni, permițând un schimb de gaze continuu.",
+                    "<b>Mamifere:</b> Respirație pulmonară alveolară, cu ventilație prin diafragm."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Evoluția a dus la trecerea de la respirație branhială (în apă) la cea pulmonară (pe uscat).",
+                "Păsările au cel mai eficient sistem respirator, cu saci aerieni și un flux de aer unidirecțional."
+              ],
+              "link": "curs.html?id=respiratia-x#respiratia-vertebrate-x"
+            }
+          ]
+        },
+        {
+          "id": "circulatia-x",
+          "titlu": "Funcția de Circulație",
+          "descriere": "Transportul substanțelor în corpul plantelor și animalelor.",
+          "icon": "default",
+          "subcapitole": [
+            {
+              "id": "circulatia-plante-x",
+              "titlu": "Circulația la Plante",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Plantele au două sisteme de transport majore:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Seva Brută:</b> Conține apă și săruri minerale. Este absorbită de perișorii absorbanți ai rădăcinii (prin osmoză) și transportată ascendent prin vasele lemnoase (Xilem) până la frunze. Forța principală este forța de sucțiune a frunzelor, generată de transpirație.",
+                    "<b>Seva Elaborată:</b> Conține substanțe organice (zahăr) produse în frunze prin fotosinteză. Este transportată (activ, cu consum de energie) prin vasele liberiene (Floem) în ambele sensuri, de la frunze (sursă) către organele de depozitare sau consum (rădăcini, fructe, meristeme)."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Seva brută (apă și săruri) circulă prin xilem, de la rădăcină la frunze.",
+                "Seva elaborată (substanțe organice) circulă prin floem, de la frunze la restul plantei."
+              ],
+              "link": "curs.html?id=circulatia-x#circulatia-plante-x"
+            },
+            {
+              "id": "mediul-intern-x",
+              "titlu": "Mediul Intern la Mamifere",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Mediul intern este format din totalitatea lichidelor extracelulare: sânge, limfă și lichid interstițial. Asigură legătura dintre celule și mediul extern."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Componentele Sângelui"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Plasma (55-60%):</b> Partea lichidă, formată din 90% apă, 9% substanțe organice (proteine, glucoză, lipide) și 1% săruri minerale.",
+                    "<b>Elemente figurate (40-45%):</b>",
+                    "  - <b>Hematii (Globule roșii):</b> Transportă $O_2$ și $CO_2$ cu ajutorul hemoglobinei.",
+                    "  - <b>Leucocite (Globule albe):</b> Au rol central în sistemul imunitar (apărarea organismului).",
+                    "  - <b>Trombocite (Plachete sanguine):</b> Au rol în coagularea sângelui."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Grupele sanguine (sistemul AB0) sunt determinate de prezența antigenelor (A, B) pe suprafața hematiilor și a anticorpilor (a, b) în plasmă."
+                }
+              ],
+              "highlights": [
+                "Sângele este format din plasmă și elemente figurate.",
+                "Leucocitele au rol în imunitate, hematiile în transportul gazelor, iar trombocitele în coagulare."
+              ],
+              "link": "curs.html?id=circulatia-x#mediul-intern-x"
+            },
+            {
+              "id": "circulatia-mamifere-x",
+              "titlu": "Sistemul Circulator la Mamifere",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Inima"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este organul central, un mușchi tetracameral (2 atrii și 2 ventricule). Atriile primesc sângele, ventriculele îl pompează. Valvulele asigură circulația într-un singur sens. Partea dreaptă a inimii lucrează cu sânge neoxigenat, iar partea stângă cu sânge oxigenat."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Mica și Marea Circulație"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Mica Circulație (Pulmonară):</b> Ventricul Drept → Artera Pulmonară → Plămâni (oxigenare) → Venele Pulmonare → Atriul Stâng.",
+                    "<b>Marea Circulație (Sistemică):</b> Ventricul Stâng → Artera Aortă → Corp (cedează $O_2$, preia $CO_2$) → Venele Cave → Atriul Drept."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Circulația la mamifere este <b>dublă</b> (are 2 circuite) și <b>completă</b> (sângele oxigenat nu se amestecă cu cel neoxigenat)."
+                }
+              ],
+              "highlights": [
+                "Inima mamiferelor are 4 camere care separă complet sângele oxigenat de cel neoxigenat.",
+                "Circulația este dublă (mare și mică) și completă."
+              ],
+              "link": "curs.html?id=circulatia-x#circulatia-mamifere-x"
+            },
+            {
+              "id": "circulatia-vertebrate-x",
+              "titlu": "Diversitatea Circulației la Vertebrate",
+              "content": [
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Pești:</b> Circulație <b>simplă</b> și completă. Inima are 2 camere (1 atriu, 1 ventricul) și pompează doar sânge neoxigenat spre branhii.",
+                    "<b>Amfibieni:</b> Circulație <b>dublă</b> și <b>incompletă</b>. Inima are 3 camere (2 atrii, 1 ventricul). În ventricul se amestecă sângele oxigenat (din plămâni) cu cel neoxigenat (din corp).",
+                    "<b>Reptile:</b> Circulație <b>dublă</b> și <b>incompletă</b>. Inima are 3 camere, dar ventriculul este parțial septat (separat), reducând amestecul sângelui. (La crocodilieni, inima este tetracamerală).",
+                    "<b>Păsări și Mamifere:</b> Circulație <b>dublă</b> și <b>completă</b>. Inima are 4 camere (2 atrii, 2 ventricule), cu separare totală a sângelui oxigenat de cel neoxigenat. Această eficiență permite menținerea unei temperaturi constante a corpului (homeotermie)."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Evoluția circulației este legată de trecerea la respirația pulmonară, de la simplă la dublă și completă."
+              ],
+              "link": "curs.html?id=circulatia-x#circulatia-vertebrate-x"
+            }
+          ]
+        },
+        {
+          "id": "excretia-x",
+          "titlu": "Funcția de Excreție",
+          "descriere": "Eliminarea substanțelor nefolositoare sau în exces din organism.",
+          "icon": "default",
+          "subcapitole": [
+            {
+              "id": "excretia-plante-x",
+              "titlu": "Excreția la Plante",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Plantele nu au organe de excreție specializate ca animalele. Principala formă de 'excreție' este eliminarea apei prin transpirație și a oxigenului (rezultat din fotosinteză)."
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Transpirația:</b> Eliminarea apei sub formă de vapori, în principal prin stomatele frunzelor. Acest proces este vital pentru răcirea plantei și pentru generarea forței de sucțiune care trage seva brută.",
+                    "<b>Gutația:</b> Eliminarea apei sub formă de picături (când transpirația este blocată de umiditate atmosferică mare).",
+                    "Alte substanțe (ex. rășini, nectar, latex) pot fi eliminate prin structuri secretoare."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Plantele elimină apa predominant prin transpirație, un proces reglat de stomate.",
+                "Transpirația ajută la ascensiunea sevei brute și la răcirea plantei."
+              ],
+              "link": "curs.html?id=excretia-x#excretia-plante-x"
+            },
+            {
+              "id": "excretia-mamifere-x",
+              "titlu": "Sistemul Excretor la Mamifere",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Sistemul excretor este format din rinichi și căi urinare (uretere, vezică urinară, uretră). Rinichii au rolul de a filtra sângele și de a menține constantă compoziția mediului intern (homeostazie)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Nefronul"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este unitatea structurală și funcțională a rinichiului. Este alcătuit din capsula Bowman (care adăpostește glomerulul de capilare) și un sistem de tubi (tub contort proximal, ansa Henle, tub contort distal)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Formarea Urinei"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>1. Filtrarea glomerulară:</b> Plasma sângelui (fără proteine și celule) este filtrată din glomerul în capsula Bowman, formând urina primară.",
+                    "<b>2. Reabsorbția tubulară:</b> În tubii nefronului, majoritatea apei (99%) și substanțelor utile (glucoză, aminoacizi, săruri) sunt reabsorbite activ în sânge.",
+                    "<b>3. Secreția tubulară:</b> Anumite substanțe (ex. medicamente, ioni în exces) sunt secretate activ din sânge în tubi, pentru a fi eliminate."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Urina finală, rezultată în urma acestor procese, este colectată și eliminată."
+                }
+              ],
+              "highlights": [
+                "Nefronul este unitatea de bază a rinichiului, unde se formează urina.",
+                "Formarea urinei implică filtrarea sângelui, reabsorbția substanțelor utile și secreția substanțelor toxice."
+              ],
+              "link": "curs.html?id=excretia-x#excretia-mamifere-x"
+            },
+            {
+              "id": "excretia-vertebrate-x",
+              "titlu": "Diversitatea Excreției la Vertebrate",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Tipul de rinichi a evoluat la vertebrate:"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Pronefros:</b> Rinichi primitiv, funcțional la larvele ciclostomilor.",
+                    "<b>Mezonefros:</b> Rinichi funcțional la pești și amfibieni.",
+                    "<b>Metanefros:</b> Cel mai evoluat rinichi, funcțional la reptile, păsări și mamifere. Este cel mai eficient în reabsorbția apei, o adaptare crucială pentru viața terestră."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Peștii de apă dulce elimină urină foarte diluată (pentru a scoate excesul de apă), în timp ce peștii de apă sărată elimină urină foarte concentrată (pentru a conserva apa)."
+                }
+              ],
+              "highlights": [
+                "Sistemul excretor a evoluat de la pronefros la mezonefros și apoi la metanefros, cel din urmă fiind cel mai performant."
+              ],
+              "link": "curs.html?id=excretia-x#excretia-vertebrate-x"
+            }
+          ]
+        },
+        {
+          "id": "relatie-x",
+          "titlu": "Funcțiile de Relație",
+          "descriere": "Sensibilitatea și mișcarea, procesele care integrează organismul în mediu.",
+          "icon": "default",
+          "subcapitole": [
+            {
+              "id": "sensibilitatea-plante-x",
+              "titlu": "Sensibilitatea și Mișcarea la Plante",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Plantele, deși fixe, reacționează la stimuli prin mișcări."
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Tropisme:</b> Mișcări orientate în funcție de direcția stimulului (ex. <b>fototropismul</b> - tulpina crește spre lumină; <b>geotropismul</b> - rădăcina crește spre centrul Pământului).",
+                    "<b>Nastii:</b> Mișcări neorientate, dependente de intensitatea stimulului (ex. <b>fotonastia</b> - floarea-soarelui se deschide la lumină; <b>seismonastia</b> - frunzele de Mimosa se strâng la atingere; <b>termonastia</b> - laleaua se deschide la căldură)."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Plantele răspund la stimuli prin mișcări orientate (tropisme) sau neorientate (nastii)."
+              ],
+              "link": "curs.html?id=relatie-x#sensibilitatea-plante-x"
+            },
+            {
+              "id": "organe-simt-x",
+              "titlu": "Organele de Simț (Ochiul, Urechea)",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Analizatorul Vizual (Ochiul)"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Receptorul este retina, care conține celule fotosensibile: <b>celule cu bastonaș</b> (sensibile la lumină slabă, pentru vederea nocturnă, alb-negru) și <b>celule cu con</b> (sensibile la lumină puternică, pentru vederea diurnă, colorată). Sistemul optic (corneea, cristalinul) focalizează imaginea pe retină. Acomodarea pentru vederea de aproape se face prin bombarea cristalinului."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Analizatorul Acustico-Vestibular (Urechea)"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Urechea externă și medie:</b> Captează (pavilionul) și transmit (timpanul și oscioarele) vibrația sonoră.",
+                    "<b>Urechea internă:</b> Conține <b>melcul</b> (pentru auz), unde vibrațiile sunt transformate în impuls nervos de către celulele senzoriale, și <b>aparatul vestibular</b> (canalele semicirculare, utricula, sacula), care detectează mișcarea și poziția capului, menținând echilibrul."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Retina conține celule cu bastonaș (pentru vederea nocturnă) și celule cu con (pentru vederea colorată).",
+                "Urechea internă găzduiește atât receptorul auditiv (melcul), cât și receptorul pentru echilibru (aparatul vestibular)."
+              ],
+              "link": "curs.html?id=relatie-x#organe-simt-x"
+            },
+            {
+              "id": "alti-receptori-x",
+              "titlu": "Receptori Chimici și Cutanati",
+              "content": [
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Analizatorul Cutantat (Pielea):</b> Conține receptori pentru atingere, presiune (mecanoreceptori), temperatură (termoreceptori) și durere (algoreceptori).",
+                    "<b>Analizatorul Gustativ (Limba):</b> Receptorii sunt mugurii gustativi din papilele gustative. Detectează substanțe chimice dizolvate în salivă (gusturile de bază: dulce, sărat, acru, amar, umami).",
+                    "<b>Analizatorul Olfactiv (Nasul):</b> Receptorii sunt neuroni olfactivi din mucoasa nazală. Detectează substanțe chimice volatile (mirosuri)."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Gustul și mirosul sunt simțuri chimice.",
+                "Pielea conține o varietate de receptori pentru atingere, presiune, temperatură și durere."
+              ],
+              "link": "curs.html?id=relatie-x#alti-receptori-x"
+            },
+            {
+              "id": "sistem-nervos-x",
+              "titlu": "Sistemul Nervos la Mamifere",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Sistemul nervos (SN) recepționează, prelucrează și transmite informații, generând răspunsuri. Este format din <b>SN Central (SNC)</b> - encefalul și măduva spinării - și <b>SN Periferic (SNP)</b> - nervi și ganglioni."
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Baza funcționării este <b>actul reflex</b>, cu baza anatomică <b>arcul reflex</b> (receptor - cale senzitivă - centru nervos - cale motorie - efector)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Encefalul"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Trunchiul cerebral:</b> Controlează reflexe vitale (respirație, bătăile inimii, digestie).",
+                    "<b>Cerebelul:</b> Controlează echilibrul, precizia și coordonarea mișcărilor.",
+                    "<b>Diencefalul:</b> Conține talamusul (releu pentru informații) și hipotalamusul (controlează temperatura, foamea, setea, emoțiile).",
+                    "<b>Emisferele cerebrale:</b> Partea cea mai dezvoltată. Scoarța cerebrală (materia cenușie) este sediul funcțiilor superioare: gândire, memorie, limbaj, voință."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Baza funcționării sistemului nervos este actul reflex.",
+                "Emisferele cerebrale, în special scoarța, reprezintă sediul funcțiilor psihice superioare."
+              ],
+              "link": "curs.html?id=relatie-x#sistem-nervos-x"
+            },
+            {
+              "id": "locomotia-animale-x",
+              "titlu": "Locomoția la Animale",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Locomoția este mișcarea activă a corpului. Se bazează pe sistemul locomotor, format din <b>sistemul osos</b> (componenta pasivă, pârghii) și <b>sistemul muscular</b> (componenta activă, generează forța prin contracție)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Adaptări la Locomoție"
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Mediu acvatic (Înot):</b> Formă hidrodinamică (pești), membre transformate în înotătoare (delfini), membrane interdigitale (broaște).",
+                    "<b>Mediu terestru (Mers):</b> Adaptări ale membrelor:",
+                    "  - <b>Plantigrad:</b> Calcă pe toată talpa (om, urs).",
+                    "  - <b>Digitigrad:</b> Calcă pe degete (pisică, câine).",
+                    "  - <b>Unguligrad:</b> Calcă pe vârful degetelor, protejate de copită (cal, oaie). Această adaptare permite viteză mare.",
+                    "<b>Mediu aerian (Zbor):</b> Membre anterioare transformate în aripi (păsări, lilieci), oase ușoare, pneumatice (păsări), stern în formă de carenă pentru inserția mușchilor pectorali."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Locomoția se bazează pe interacțiunea dintre sistemul osos (pârghii) și sistemul muscular (forța).",
+                "Tipul de locomoție (plantigrad, digitigrad, unguligrad) reflectă o adaptare la viteză și mediu."
+              ],
+              "link": "curs.html?id=relatie-x#locomotia-animale-x"
+            }
+          ]
+        },
+        {
+          "id": "reproducerea-x",
+          "titlu": "Funcția de Reproducere",
+          "descriere": "Asigurarea perpetuării speciei prin urmași.",
+          "icon": "reproducere",
+          "subcapitole": [
+            {
+              "id": "reproducerea-plante-x",
+              "titlu": "Reproducerea la Plante",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Reproducerea Asexuată (Vegetativă)"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Produce urmași identici genetic cu planta mamă. Se realizează natural (prin stoloni, rizomi, bulbi) sau artificial (butășire, marcotaj, altoire)."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Reproducerea Sexuată la Angiosperme"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Organul de reproducere este <b>floarea</b>. Procesul implică <b>polenizarea</b> (transportul polenului pe stigmat) și <b>fecundația</b>. La angiosperme are loc o <b>dublă fecundație</b>: un gamet masculin se unește cu oosfera (formând embrionul, diploid) și celălalt gamet masculin se unește cu nucleul secundar (formând endospermul/albumenul, țesutul nutritiv, triploid). În urma fecundației, ovulul se transformă în sămânță, iar ovarul în fruct."
+                }
+              ],
+              "highlights": [
+                "Reproducerea asexuată (vegetativă) produce clone genetice ale plantei mamă.",
+                "La angiosperme are loc o dublă fecundație, care formează atât embrionul (diploid), cât și endospermul (triploid)."
+              ],
+              "link": "curs.html?id=reproducerea-x#reproducerea-plante-x"
+            },
+            {
+              "id": "reproducerea-animale-x",
+              "titlu": "Reproducerea la Animale",
+              "content": [
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Reproducerea Asexuată"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Este rară la animale. Exemple: înmugurirea la hidră, regenerarea la planarie, partenogeneza (dezvoltarea dintr-un ovul nefecundat) la unele insecte."
+                },
+                {
+                  "type": "heading",
+                  "level": "h3",
+                  "content": "Reproducerea Sexuată la Mamifere"
+                },
+                {
+                  "type": "paragraph",
+                  "content": "Implică organe specializate (gonade): testiculele (produc spermatozoizi) la mascul și ovarele (produc ovule) la femelă. Fecundația este internă. Embrionul se dezvoltă în uterul mamei, unde este hrănit și protejat prin intermediul placentei."
+                }
+              ],
+              "highlights": [
+                "Reproducerea asexuată la animale este rară (ex. înmugurirea la hidră).",
+                "Mamiferele placentare asigură dezvoltarea embrionului în uter, hrănindu-l prin placentă."
+              ],
+              "link": "curs.html?id=reproducerea-x#reproducerea-animale-x"
+            },
+            {
+              "id": "reproducerea-vertebrate-x",
+              "titlu": "Diversitatea Reproducerii la Vertebrate",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": "Evoluția reproducerii este marcată de adaptarea la mediul terestru."
+                },
+                {
+                  "type": "list",
+                  "items": [
+                    "<b>Fecundație Externă:</b> Specifică mediului acvatic (majoritatea peștilor și amfibienilor).",
+                    "<b>Fecundație Internă:</b> Specifică mediului terestru (reptile, păsări, mamifere).",
+                    "<b>Oul Amniotic:</b> O inovație majoră (la reptile, păsări) care a permis reproducerea pe uscat. Oul are coajă și anexe embrionare (amnios, alantoidă) care protejează și hrănesc embrionul.",
+                    "<b>Tipuri de dezvoltare:</b> <b>Ovipare</b> (depun ouă, ex. păsări), <b>Ovovivipare</b> (ouăle se dezvoltă în corpul mamei, dar fără placentă, ex. unii șerpi), <b>Vivipare</b> (embrionul se dezvoltă în uter, hrănit prin placentă, ex. mamifere)."
+                  ]
+                }
+              ],
+              "highlights": [
+                "Trecerea la viața terestră a fost posibilă datorită apariției fecundației interne și a oului amniotic."
+              ],
+              "link": "curs.html?id=reproducerea-x#reproducerea-vertebrate-x"
             }
           ]
         }
@@ -123,4 +876,3 @@
     }
   }
 }
-
